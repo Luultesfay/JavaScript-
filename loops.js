@@ -111,8 +111,7 @@ while (rep <= 10) {
 }
 
 //note  while loop is not depend on counters    in the above example we put counter becouse we need it
-/*but  with
-But all the while loop really needs is the condition
+/*but  with But all the while loop really needs is the condition
 
 which needs to stay true for it to keep running.
 
