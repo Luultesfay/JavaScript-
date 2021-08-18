@@ -180,7 +180,7 @@ if (dolphinsAverageScore > koalasAverageScore && dolphinsAverageScore >= 100) {
 //console.log(`The bill was ${bill} and tip was ${tip}, and the total value is ${bill + tip}`);
 
 let tip;
-//let bill = Math.random() * 400; //we generated bill number randomly
+//let bill = Math.random() * 400; //we generated bill number randomly and we get different tokin
 let bill = Number(prompt("enter bill")); // we get the bill form the waiter input
 bill >= 50 && bill <= 300
   ? (tip = (15 / 100) * bill)
