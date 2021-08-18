@@ -1,9 +1,9 @@
-let myCountry = 'Eritrea';
-let myContinent = 'Africa';
+let myCountry = "Eritrea";
+let myContinent = "Africa";
 let myPopulation = 6000000;
-console.log(myCountry);
+console.log(typeof myCountry);
 console.log(myContinent);
-console.log(myPopulation);
+console.log(typeof myPopulation);
 
 //BMI assigments challenge 1
 const markMass = 78;
@@ -11,11 +11,10 @@ const markHeight = 1.69;
 const johnMass = 92;
 const johnHeight = 1.95;
 
-
 const BMIMark = markMass / (markHeight * markHeight);
 const BMIJohn = johnMass / (johnHeight * johnHeight);
 
-console.log(markHigherBMI = BMIMark > BMIJohn);
+console.log((markHigherBMI = BMIMark > BMIJohn));
 console.log(BMIMark, BMIJohn, markHigherBMI);
 
 // if /else assigment  challenge 2
@@ -25,55 +24,54 @@ is either "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark
 2. Use a template literal to include the BMI values in the outputs. Example: "Mark's
 BMI (28.3) is higher than John's (23.9)!" */
 
-
 if (BMIMark > BMIJohn) {
-    console.log("Mark's BMI is higher than John's!");
-    console.log(`Mark's BMI (${BMIMark})is higher than John's! (${BMIJohn})`);
-
+  console.log("Mark's BMI is higher than John's!");
+  console.log(`Mark's BMI (${BMIMark})is higher than John's! (${BMIJohn})`);
+} else {
+  console.log(`John's (${BMIJohn})BMI is higher than Mark's(${BMIMark})!`);
 }
-else {
-    console.log(`John's (${BMIJohn})BMI is higher than Mark's(${BMIMark})!`);
 
-}
+//using conditional (ternary) operator
+if (
+  BMIMark > BMIJohn
+    ? console.log(`Mark's BMI ${BMIMark} is higher than John's! (${BMIJohn})`)
+    : `John's (${BMIJohn})BMI is higher than Mark's(${BMIMark})!`
+);
 //truely and falsey value
 
 let money = 0;
 if (money) {
-    console.log("yep i have money");
-}
-else {
-    console.log("nop i dont have any money");//out put 'nop i dont have any money' b/c 0 is falsey when it change to boolean
+  console.log("yep i have money");
+} else {
+  console.log("nop i dont have any money"); //out put 'nop i dont have any money' b/c 0 is falsey when it change to boolean
 }
 //2nd ex of falsey  empty string
 let wife = "";
 if (wife) {
-    console.log("yep i have wife");
+  console.log("yep i have wife");
+} else {
+  console.log("nop i dont have any wife"); //out put 'nop i dont have any wife' b/c "" is falsey when it change to boolean
 }
-else {
-    console.log("nop i dont have any wife");//out put 'nop i dont have any wife' b/c "" is falsey when it change to boolean
-}
-
 
 //3rd ex of falsey value   (undifined)
-let plane;// plane not declare so its undifined
+let plane; // plane not declare so its undifined
 if (plane) {
-    console.log("yep i have plane");
-}
-else {
-    console.log("nop i dont have any plane");//out put 'nop i dont have any plane' b/c (undifined )is falsey when it change to boolean
+  console.log("yep i have plane");
+} else {
+  console.log("nop i dont have any plane"); //out put 'nop i dont have any plane' b/c (undifined )is falsey when it change to boolean
 }
 
 //strictly comparison (===) Vs loose comparison(==)
 
 let age = 18;
-if (age === 18) console.log('you are adult');//only both sides should be true and there is no type convertion is performed here
+if (age === 18) console.log("you are adult"); //only both sides should be true and there is no type convertion is performed here
 
-let doors = '12';
-if (doors === 12) console.log('you have doors');//this dosent give as an out put becouse both sides is different types( and in the case of strictly comparison there is no type casting) 
+let doors = "12";
+if (doors === 12) console.log("you have doors"); //this dosent give as an out put becouse both sides is different types( and in the case of strictly comparison there is no type casting)
 
 //ex of loose
 let num = 23;
-if (num == '23') console.log("we have numbers");//this will be true and we will get an output "we have numbers" even if the numbers 23 is not equal to string'23' 
+if (num == "23") console.log("we have numbers"); //this will be true and we will get an output "we have numbers" even if the numbers 23 is not equal to string'23'
 //type conversion is periformed internaly and automatically
 
 //how to prompt input for example of strict comparison and loose conparison
@@ -86,17 +84,20 @@ if (favourite == 23) {//outputs  "wow, we have our number 23 "  becouse its type
 } 
 */
 
-let favourite = Number(prompt('what is your favourite number '));
+/*
+let favourite = Number(prompt("what is your favourite number "));
 console.log(favourite);
 console.log(typeof favourite);
 
-if (favourite === 23) {//outputs  "wow, we have our number 23 "  becouse we type cast manualy  in the above code  Number(prompt('what is your favourite number '));
-    console.log("wow, we have our number 23 ")
+if (favourite === "23") {
+  //outputs  "wow, we have our number 23 "  becouse we type cast manualy  in the above code  Number(prompt('what is your favourite number '));
+  console.log("wow, we have our number 23 ");
+} else {
+  console.log(`we don't  have favorite`);
 }
+*/
 
-//note === stricktly comparison is the best practice     but loose (==)is not good practice becouse it  creates a lot of bugs 
-
-
+//note === stricktly comparison is the best practice     but loose (==)is not good practice becouse it  creates a lot of bugs
 
 //coding challenge 3     logical oprrator  and(&&) , or(&&)  , not (!);   solved 1 and 2
 /*
@@ -148,23 +149,29 @@ const koalasScore2 = 95;
 
 const koalasScore3 = 123;
 
-const dolphinsAverageScore = (dolphinsScore1 + dolphinsScore2 + dolphinsScore3) / 3;
+const dolphinsAverageScore =
+  (dolphinsScore1 + dolphinsScore2 + dolphinsScore3) / 3;
 const koalasAverageScore = (koalasScore1 + koalasScore2 + koalasScore3) / 3;
 
-console.log(`average of dolphine is ${dolphinsAverageScore} and average of koalas is ${koalasAverageScore} `)
+console.log(
+  `average of dolphine is ${dolphinsAverageScore} and average of koalas is ${koalasAverageScore} `
+);
 
 if (dolphinsAverageScore > koalasAverageScore && dolphinsAverageScore >= 100) {
-    console.log(` yahoo..Dolphines are the winners `);
-}
-else if (dolphinsAverageScore < koalasAverageScore && koalasAverageScore >= 100) {
-    console.log(` yahoo..koalas are the winners `);
-}
-else if (dolphinsAverageScore === koalasAverageScore && koalasAverageScore >= 100 && dolphinsAverageScore >= 100) {
-    console.log(` yahoo..koalas are the winners `);
-}
-else {
-    console.log(` no one win the trophy`);
-
+  console.log(` yahoo..Dolphines are the winners `);
+} else if (
+  dolphinsAverageScore < koalasAverageScore &&
+  koalasAverageScore >= 100
+) {
+  console.log(` yahoo..koalas are the winners `);
+} else if (
+  dolphinsAverageScore === koalasAverageScore &&
+  koalasAverageScore >= 100 &&
+  dolphinsAverageScore >= 100
+) {
+  console.log(` yahoo..both team  are the drow`);
+} else {
+  console.log(` no one win the trophy`);
 }
 
 //coding challenge #4 solving by ternary operator
@@ -172,6 +179,14 @@ else {
 //bill >= 50 && bill <= 300 ? tip = (15 / 100) * bill : tip=(20 / 100) * bill;
 //console.log(`The bill was ${bill} and tip was ${tip}, and the total value is ${bill + tip}`);
 
-let tip; let bill = 430;
-bill >= 50 && bill <= 300 ? tip = (15 / 100) * bill : tip = (20 / 100) * bill;
-console.log(`The bill was ${bill} and tip was ${tip}, and the total value is ${bill + tip}`);
+let tip;
+//let bill = Math.random() * 400; //we generated bill number randomly
+let bill = Number(prompt("enter bill")); // we get the bill form the waiter
+bill >= 50 && bill <= 300
+  ? (tip = (15 / 100) * bill)
+  : (tip = (20 / 100) * bill);
+console.log(
+  `The bill was ${bill} and tip was ${tip}, and the total value is ${
+    bill + tip
+  }`
+);
